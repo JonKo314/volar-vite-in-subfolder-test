@@ -1,0 +1,28 @@
+{
+  "configurations": [
+    {
+      "name": "Backend NPM",
+      "type": "node",
+      "request": "launch",
+      "cwd": "${workspaceFolder}/backend",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run-script", "dev"],
+      "outputCapture": "std"
+    },
+    {
+      "name": "Frontend NPM",
+      "type": "node",
+      "request": "launch",
+      "cwd": "${workspaceFolder}/frontend",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev"],
+      "outputCapture": "std"
+    }
+  ],
+  "compounds": [
+    {
+      "name": "Frontend+Backend NPM",
+      "configurations": ["Frontend NPM", "Backend NPM"]
+    }
+  ]
+}
